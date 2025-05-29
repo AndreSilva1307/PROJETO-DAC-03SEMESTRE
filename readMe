@@ -1,0 +1,50 @@
+# ByteBlass - Sistema de Gerenciamento Médico
+
+Sistema desktop para gerenciamento de dados de pacientes e médicos, desenvolvido com Electron.
+
+## Funcionalidades Principais
+
+* **Autenticação:**
+    * Cadastro e Login para Pacientes e Médicos.
+    * Senhas com hash (bcryptjs).
+* **Painel do Paciente:**
+    * Visualizar dados pessoais.
+    * Ver consultas agendadas.
+    * Acessar arquivos médicos.
+* **Painel do Médico:**
+    * Visualizar dados pessais.
+    * Listar todos os pacientes.
+    * Gerenciar consultas (agendar, alterar, remover).
+    * Gerenciar arquivos de pacientes (upload, remover).
+
+## Tecnologias
+* Electron
+* Node.js
+* NeDB (banc de dados local)
+* HTML, CSS, JavaScript
+
+## Como Executar
+1.  **Clone o repositório:**
+    ```bash
+    git clone <url-do-seu-repositorio>
+    cd <nome-do-repositorio>
+    ```
+2.  **Instale as dependencias:**
+    ```bash
+    npm install
+    ```
+3.  **Inicie a aplicação:**
+    ```bash
+    npm start
+    ```
+    (Este comando executa `electron .` conforme `package.json`)
+
+## Banco de Dados
+Utiliza NeDB com as seguintes coleções principais:
+* `users`
+* `patients`
+* `doctors`
+* `appointments`
+* `patientFiles`
+
+Os arquivos do banco de dados (`.db`) são criados em `src/database/`.

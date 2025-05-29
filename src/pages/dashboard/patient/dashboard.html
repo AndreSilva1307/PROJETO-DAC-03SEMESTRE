@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard do Paciente - ByteBlass</title>
+  <link rel="stylesheet" href="../../../assets/css/main.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="header-content">
+        <h1>Bem-vindo(a), <span id="userName"></span></h1>
+    </div>
+    <button id="logoutBtn" class="btn logout-btn">Sair</button>
+  </header>
+  
+  <main class="dashboard-container">
+    <section class="dashboard-section">
+      <div class="card user-info-card">
+         <div class="section-header">
+            <h2>Suas Informações</h2>
+        </div>
+        <div id="patientInfo" class="info-grid"></div>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="card">
+        <div class="section-header">
+          <h2>Próximas Consultas</h2>
+          <button id="refreshAppointmentsBtn" class="btn btn-secondary small-btn">Atualizar Consultas</button>
+        </div>
+        <div id="appointmentsList" class="list-container">
+          </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <div class="card">
+        <div class="section-header">
+          <h2>Meus Arquivos</h2>
+          <button id="refreshFilesBtn" class="btn btn-secondary small-btn">Atualizar Arquivos</button>
+        </div>
+        <div id="patientFilesList" class="list-container">
+            </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
